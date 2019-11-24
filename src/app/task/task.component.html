@@ -1,0 +1,10 @@
+<h3>{{ task.title | uppercase}}</h3>
+<div>
+    <button (click)="task.hide = !task.hide" mat-raised-button>Montrer</button>
+
+    <button (click)="deleteTask(task)" mat-raised-button>Supprimer</button>
+</div>
+<div [hidden]="task.hide">
+    <p>{{task.description}}</p>
+</div>
+
